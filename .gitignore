@@ -1,0 +1,12 @@
+build/
+tools/
+dist/
+node_modules/
+*.jks
+*.keystore
+local.properties
+.env
+.env.*
+!.env.example
+*.log
+__pycache__/

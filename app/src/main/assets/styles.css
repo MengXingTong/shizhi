@@ -1,0 +1,165 @@
+
+    #shizhi-app { padding: 18px 10px; }
+    #shizhi-app .sz-preview-label { max-width: 430px; margin: 0 auto 12px; padding-right: 90px; color: light-dark(#69736d,#a8b4ad); font: 12px/1.5 system-ui,sans-serif; }
+    #shizhi-app .sz-product { --sz-bg: light-dark(#f6f7f2,#17221e); --sz-paper: light-dark(#ffffff,#21322a); --sz-ink: light-dark(#24392e,#edf2e7); --sz-sub: light-dark(#6c7b70,#b0bfb1); --sz-line: light-dark(#e3e8dd,#3a4b40); --sz-green: light-dark(#315f49,#c1d8a9); --sz-on-green: light-dark(#ffffff,#1d3224); --sz-soft: light-dark(#eaf0e2,#304632); --sz-warm: light-dark(#f1ecdf,#3e3a2c); --sz-error: light-dark(#9c503c,#f0aa8e); max-width: 430px; margin: auto; overflow: hidden; border: 1px solid var(--sz-line); border-radius: 26px; background: var(--sz-bg); color: var(--sz-ink); font: 14px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI","Microsoft YaHei UI","Microsoft YaHei",sans-serif; font-family: "Segoe UI","Microsoft YaHei UI","Microsoft YaHei",sans-serif!important; box-shadow: 0 14px 48px light-dark(#263b3020,#00000030); }
+    #shizhi-app .sz-product * { box-sizing: border-box; font-family: inherit !important; }
+    #shizhi-app [hidden] { display: none !important; }
+    #shizhi-app .sz-product button, #shizhi-app .sz-product input, #shizhi-app .sz-product textarea, #shizhi-app .sz-product select { font: inherit; color: inherit; }
+    #shizhi-app .sz-product button { border: 0; background: transparent; min-height: 44px; padding: 8px 12px; border-radius: 12px; }
+    #shizhi-app .sz-product button:disabled { opacity: .4; }
+    #shizhi-app .sz-product button:focus-visible, #shizhi-app .sz-product input:focus-visible, #shizhi-app .sz-product textarea:focus-visible { outline: 2px solid var(--sz-green); outline-offset: 3px; }
+    #shizhi-app .sz-product h1, #shizhi-app .sz-product h2, #shizhi-app .sz-product h3, #shizhi-app .sz-product p { margin: 0; }
+    #shizhi-app .sz-product h1 { font-size: 25px; font-weight: 500; line-height: 1.45; letter-spacing: -.7px; }
+    #shizhi-app .sz-product h2 { font-size: 18px; font-weight: 500; line-height: 1.55; }
+    #shizhi-app .sz-product h3 { font-size: 15px; font-weight: 500; }
+    #shizhi-app .sz-row { display: flex; align-items: center; gap: 10px; }
+    #shizhi-app .sz-between { justify-content: space-between; }
+    #shizhi-app .sz-icon { display: inline-flex; align-items: center; justify-content: center; flex-shrink: 0; }
+    #shizhi-app .sz-icon svg { width: 19px; height: 19px; stroke-width: 1.7; }
+    #shizhi-app .sz-header { padding: 23px 22px 12px; }
+    #shizhi-app .sz-logo { width: 36px; height: 36px; background: var(--sz-green); color: var(--sz-on-green); border-radius: 12px; }
+    #shizhi-app .sz-brand { font-size: 19px; font-weight: 500; letter-spacing: 3px; }
+    #shizhi-app .sz-brand-en { margin-top: -4px; font-size: 10px; letter-spacing: 2px; color: var(--sz-sub); }
+    #shizhi-app .sz-platform { background: var(--sz-paper)!important; border: 1px solid var(--sz-line)!important; font-size: 12px!important; gap: 6px; }
+    #shizhi-app .sz-platform-mark { font-size: 11px; font-weight: 500; letter-spacing: -.7px; }
+    #shizhi-app .sz-intro { padding: 9px 22px 19px; }
+    #shizhi-app .sz-intro p { color: var(--sz-sub); margin-top: 5px; font-size: 12px; }
+    #shizhi-app .sz-tabs { display: grid; grid-template-columns: .85fr .85fr .85fr 1.25fr; padding: 0 14px; border-bottom: 1px solid var(--sz-line); gap: 0; }
+    #shizhi-app .sz-tabs button { color: var(--sz-sub); border-radius: 0; position: relative; white-space: nowrap; padding: 10px 0 13px; font-size: 13px; }
+    #shizhi-app .sz-tabs button[aria-selected="true"] { color: var(--sz-green); font-weight: 500; }
+    #shizhi-app .sz-tabs button[aria-selected="true"]::after { content: ""; position: absolute; bottom: 0; left: 24%; right: 24%; height: 3px; background: var(--sz-green); border-radius: 3px 3px 0 0; }
+    #shizhi-app .sz-content { padding: 19px 18px 20px; min-height: 380px; }
+    #shizhi-app .sz-badge { display: inline-flex; gap: 5px; align-items: center; font-size: 11px; padding: 3px 8px; border-radius: 6px; color: var(--sz-green); background: var(--sz-soft); }
+    #shizhi-app .sz-sub { color: var(--sz-sub); font-size: 12px; }
+    #shizhi-app .sz-dot { height: 5px; width: 5px; background: currentColor; border-radius: 100%; display: inline-block; }
+    #shizhi-app .sz-primary { background: var(--sz-green)!important; color: var(--sz-on-green)!important; display: inline-flex; align-items: center; justify-content: center; gap: 8px; font-weight: 500!important; }
+    #shizhi-app .sz-outline { border: 1px solid var(--sz-line)!important; background: var(--sz-paper)!important; }
+    #shizhi-app .sz-link { color: var(--sz-green)!important; font-size: 12px!important; }
+    #shizhi-app .sz-fill { width: 100%; }
+    #shizhi-app .sz-scan { margin-bottom: 17px; gap: 8px; }
+    #shizhi-app .sz-scan .sz-primary { flex: 1; }
+    #shizhi-app .sz-scan-state { flex: 1.15; padding-left: 4px; font-size: 12px; }
+    #shizhi-app .sz-scan-state p + p { margin-top: 3px; }
+    #shizhi-app .sz-player { background: var(--sz-paper); border: 1px solid var(--sz-line); padding: 18px; border-radius: 20px; }
+    #shizhi-app .sz-player-title { margin-top: 13px!important; font-size: 20px!important; line-height: 1.6!important; }
+    #shizhi-app .sz-player-source { display: flex; align-items: center; gap: 6px; color: var(--sz-sub); margin: 9px 0 14px!important; font-size: 11px; flex-wrap: wrap; }
+    #shizhi-app .sz-summary { padding: 12px 13px; background: var(--sz-bg); border-radius: 12px; font-size: 13px; line-height: 1.85; }
+    #shizhi-app .sz-progress { height: 3px; background: var(--sz-soft); border-radius: 8px; margin-top: 23px; overflow: hidden; }
+    #shizhi-app .sz-progress span { display: block; width: 26%; height: 100%; background: var(--sz-green); }
+    #shizhi-app .sz-timeline { color: var(--sz-sub); font-size: 10px; margin-top: 5px; }
+    #shizhi-app .sz-controls { justify-content: center; gap: 24px; margin: 13px 0 9px; }
+    #shizhi-app .sz-controls .sz-play { width: 57px; height: 57px; border-radius: 50%; background: var(--sz-green); color: var(--sz-on-green); }
+    #shizhi-app .sz-controls button { display: inline-flex; align-items: center; justify-content: center; }
+    #shizhi-app .sz-controls .sz-play svg { width: 24px; height: 24px; }
+    #shizhi-app .sz-controls .sz-skip { color: var(--sz-green); }
+    #shizhi-app .sz-player-footer { border-top: 1px solid var(--sz-line); padding-top: 5px; }
+    #shizhi-app .sz-player-footer button { min-height: 35px; padding: 3px 0; font-size: 11px; }
+    #shizhi-app .sz-section-title { margin: 21px 2px 4px; }
+    #shizhi-app .sz-section-title h3 { font-size: 14px; }
+    #shizhi-app .sz-list-row { border-bottom: 1px solid var(--sz-line); display: flex; align-items: center; gap: 10px; padding: 12px 1px; }
+    #shizhi-app .sz-list-row:last-child { border-bottom: 0; }
+    #shizhi-app .sz-art { width: 44px; height: 48px; border-radius: 10px; background: var(--sz-soft); color: var(--sz-green); display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+    #shizhi-app .sz-art.warm { background: var(--sz-warm); }
+    #shizhi-app .sz-list-copy { flex: 1; min-width: 0; }
+    #shizhi-app .sz-list-copy h3 { font-size: 12px; line-height: 1.65; }
+    #shizhi-app .sz-list-copy p { font-size: 10px; margin-top: 3px; color: var(--sz-sub); }
+    #shizhi-app .sz-list-row .sz-row-action { padding: 6px; min-width: 40px; display: flex; align-items: center; justify-content: center; }
+    #shizhi-app .sz-note { margin-top: 14px!important; color: var(--sz-sub); font-size: 11px; line-height: 1.8; }
+    #shizhi-app .sz-group { background: var(--sz-paper); border: 1px solid var(--sz-line); border-radius: 17px; padding: 17px; margin-bottom: 14px; }
+    #shizhi-app .sz-group-head { margin-bottom: 13px; }
+    #shizhi-app .sz-setting-row { padding: 14px 0; border-bottom: 1px solid var(--sz-line); }
+    #shizhi-app .sz-setting-row > .sz-row { flex-wrap: wrap; }
+    #shizhi-app .sz-setting-row:last-child { border: 0; padding-bottom: 0; }
+    #shizhi-app .sz-setting-label { font-size: 13px; font-weight: 500; }
+    #shizhi-app .sz-setting-help { color: var(--sz-sub); font-size: 11px; line-height: 1.8; margin-top: 6px!important; }
+    #shizhi-app .sz-stepper { display: flex; align-items: center; gap: 3px; background: var(--sz-bg); border-radius: 12px; }
+    #shizhi-app .sz-stepper button { width: 36px; padding: 5px; font-size: 20px; color: var(--sz-green); }
+    #shizhi-app .sz-stepper output { min-width: 34px; text-align: center; font-size: 14px; font-variant-numeric: tabular-nums; }
+    #shizhi-app .sz-field { display: block; margin-top: 14px; }
+    #shizhi-app .sz-field > span { display: block; font-size: 12px; margin-bottom: 7px; }
+    #shizhi-app .sz-product input:not([type="checkbox"]), #shizhi-app .sz-product textarea, #shizhi-app .sz-product select { width: 100%; min-height: 44px; border: 1px solid var(--sz-line); border-radius: 11px; background: var(--sz-bg); padding: 10px 11px; font-size: 16px; resize: vertical; }
+    #shizhi-app .sz-product textarea { line-height: 1.7; min-height: 105px; }
+    #shizhi-app .sz-product input::placeholder { color: var(--sz-sub); }
+    #shizhi-app .sz-product input[type="checkbox"] { accent-color: var(--sz-green); width: 20px; height: 20px; flex-shrink: 0; }
+    #shizhi-app .sz-switch-label { flex: 1; }
+    #shizhi-app .sz-bottom { border-top: 1px solid var(--sz-line); background: var(--sz-paper); display: grid; grid-template-columns: 1fr 1fr; padding: 8px 20px 11px; }
+    #shizhi-app .sz-bottom button { display: flex; flex-direction: column; gap: 2px; align-items: center; color: var(--sz-sub); font-size: 10px; }
+    #shizhi-app .sz-bottom button[aria-current="page"] { color: var(--sz-green); }
+    #shizhi-app .sz-bottom button[aria-current="page"] .sz-icon { background: var(--sz-soft); width: 58px; height: 29px; border-radius: 12px; }
+    #shizhi-app .sz-bottom .sz-icon { height: 29px; }
+    #shizhi-app .sz-mini { background: var(--sz-soft); margin: 0 18px 13px; border-radius: 12px; padding: 7px 10px; }
+    #shizhi-app .sz-mini-title { flex: 1; font-size: 11px; min-width: 0; }
+    #shizhi-app .sz-mini button { display: flex; padding: 5px; min-width: 40px; }
+    #shizhi-app .sz-toast { background: var(--sz-green); color: var(--sz-on-green); padding: 10px 16px; font-size: 12px; }
+    #shizhi-app .sz-empty { text-align: center; padding: 35px 10px; }
+    #shizhi-app .sz-empty .sz-icon { color: var(--sz-green); margin-bottom: 10px; }
+    #shizhi-app .sz-detail { border-top: 1px solid var(--sz-line); margin-top: 12px; padding-top: 12px; }
+    #shizhi-app .sz-detail ol { padding-left: 19px; margin: 10px 0; }
+    #shizhi-app .sz-detail li { margin-bottom: 12px; font-size: 12px; }
+    #shizhi-app .sz-quote { background: var(--sz-bg); padding: 9px; margin-top: 6px; border-radius: 8px; color: var(--sz-sub); font-size: 11px; }
+    #shizhi-app .sz-time-link { min-height: 28px!important; padding: 0 5px!important; color: var(--sz-green)!important; }
+    #shizhi-app .sz-day { color: var(--sz-sub); font-size: 11px; padding: 12px 0 3px; }
+    #shizhi-app .sz-key-row { position: relative; }
+    #shizhi-app .sz-key-row input { padding-right: 50px!important; }
+    #shizhi-app .sz-key-row button { position: absolute; right: 2px; top: 1px; min-width: 44px; display: flex; align-items: center; justify-content: center; }
+    #shizhi-app .sz-platform-choice { border: 1px solid var(--sz-line); border-radius: 14px; margin-bottom: 15px; padding: 10px 12px; background: var(--sz-paper); }
+    #shizhi-app .sz-product details summary { padding: 10px 0; font-size: 12px; }
+    @media(max-width:360px) { #shizhi-app { padding: 8px 0; } #shizhi-app .sz-product { border-radius: 19px; } #shizhi-app .sz-header { padding: 18px 16px 10px; } #shizhi-app .sz-intro { padding-left:16px; padding-right:16px; } #shizhi-app .sz-content { padding: 15px 12px; } #shizhi-app .sz-player { padding: 15px; } #shizhi-app .sz-controls { gap: 19px; } }
+  html,body { margin:0; padding:0; height:100%; background:#f6f7f2; color-scheme:light; }
+#shizhi-app { padding:0; height:100dvh; height:100vh; }
+#shizhi-app .sz-product { max-width:none; height:100%; display:flex; flex-direction:column; border:0; border-radius:0; box-shadow:none; }
+#shizhi-app .sz-header { flex:none; padding-top:16px; }
+#sz-view { flex:1; min-height:0; overflow:auto; overscroll-behavior-y:contain; }
+#sz-mini { flex:none; }
+#shizhi-app .sz-bottom { flex:none; }
+#shizhi-app .sz-toast { display:flex; justify-content:space-between; align-items:center; flex:none; gap:8px; }
+#shizhi-app .sz-toast button { color:inherit; min-width:36px; padding:0; }
+#shizhi-app .sz-onboard { margin-bottom:18px; }
+#shizhi-app .sz-checklist { display:grid; gap:6px; margin-top:12px; }
+#shizhi-app .sz-checklist button { text-align:left; padding:9px 11px; background:var(--sz-bg); display:flex; align-items:center; justify-content:space-between; gap:8px; font-size:12px; }
+#shizhi-app .sz-checklist .done { color:var(--sz-green); }
+#shizhi-app .sz-list-title { text-align:left; padding:0; min-height:0; font-size:13px; font-weight:500; }
+#shizhi-app .sz-row-actions { display:flex; align-items:center; }
+#shizhi-app .sz-source-box { border:1px solid var(--sz-line); background:var(--sz-paper); padding:16px; border-radius:16px; }
+#shizhi-app .sz-detail h2 { margin:12px 0; }
+#shizhi-app .sz-progress { width:100%; appearance:none; display:block; border:0; }
+#shizhi-app .sz-progress::-webkit-progress-bar { background:var(--sz-soft); border-radius:8px; }
+#shizhi-app .sz-progress::-webkit-progress-value { background:var(--sz-green); border-radius:8px; }
+#shizhi-app .sz-error { color:var(--sz-error); }
+#shizhi-app .sz-preview-banner { padding:7px 18px; font-size:11px; background:var(--sz-warm); flex:none; }
+#shizhi-app .sz-form-actions { display:flex; gap:10px; margin-top:18px; flex-wrap:wrap; }
+#shizhi-app .sz-form-actions button { flex:1; min-width:100px; }
+#shizhi-app .sz-inline-note { padding:10px 0 0; font-size:11px; color:var(--sz-sub); }
+#shizhi-app .sz-policy-note { margin-bottom:15px; }
+#shizhi-app .sz-button-row { display:flex; gap:8px; flex-wrap:wrap; margin-top:12px; }
+#shizhi-app .sz-button-row button { display:inline-flex; align-items:center; justify-content:center; gap:6px; }
+#shizhi-app .sz-section-heading { margin-bottom:8px; }
+#shizhi-app .sz-static-help { margin:8px 0; font-size:11px; color:var(--sz-sub); }
+#shizhi-app .sz-player-source .sz-icon { min-width:19px; }
+#shizhi-app .sz-usage { margin-top:10px; font-size:11px; color:var(--sz-sub); }
+@media (min-width:640px){ #shizhi-app .sz-content,#shizhi-app .sz-intro,#shizhi-app .sz-tabs { max-width:660px; margin-left:auto; margin-right:auto; width:100%; } }
+#shizhi-app .sz-runtime { margin-bottom:16px; padding:14px; border:1px solid var(--sz-line); border-radius:16px; background:var(--sz-paper); }
+#shizhi-app .sz-runtime h3 { display:flex; align-items:center; gap:6px; font-size:13px; }
+#shizhi-app .sz-runtime.is-error { border-color:var(--sz-error); }
+#shizhi-app .sz-runtime.is-error h3,#shizhi-app .sz-runtime-failed { color:var(--sz-error); }
+#shizhi-app .sz-runtime-time { font-size:10px; color:var(--sz-sub); flex-shrink:0; }
+#shizhi-app .sz-runtime-message { font-size:12px; line-height:1.8; margin-top:8px; overflow-wrap:anywhere; }
+#shizhi-app .sz-stages { display:flex; flex-wrap:wrap; list-style:none; padding:0; margin:12px 0; gap:5px; }
+#shizhi-app .sz-stages li { font-size:10px; padding:3px 9px; border-radius:6px; background:var(--sz-bg); color:var(--sz-sub); }
+#shizhi-app .sz-stages .is-current { background:var(--sz-green); color:var(--sz-on-green); }
+#shizhi-app .sz-stages .is-past { background:var(--sz-soft); color:var(--sz-green); }
+#shizhi-app .sz-runtime-counts { display:flex; flex-wrap:wrap; gap:5px 12px; font-size:11px; color:var(--sz-sub); }
+#shizhi-app .sz-runtime-skip,#shizhi-app .sz-runtime-source,#shizhi-app .sz-runtime-video,#shizhi-app .sz-runtime-failed { font-size:11px; line-height:1.8; margin-top:7px; overflow-wrap:anywhere; }
+#shizhi-app .sz-runtime-skip,#shizhi-app .sz-runtime-source { color:var(--sz-sub); }
+#shizhi-app .sz-playback-notice { padding:10px 12px; margin-bottom:12px; border-radius:10px; background:var(--sz-warm); font-size:12px; }
+#shizhi-app .sz-runtime-batch { font-size:11px; color:var(--sz-sub); line-height:1.8; margin:4px 0 8px; }
+/* Listening-first: show the current content before diagnostics, with concise refill status. */
+#shizhi-app .sz-buffer-target { font-size:11px; color:var(--sz-muted,#68756b); margin-top:8px; line-height:1.8; }
+#shizhi-app .sz-retry-countdown { font-size:12px; color:#315d49; margin-top:8px; font-weight:600; }
+#shizhi-app .sz-runtime details { margin-top:10px; }
+#shizhi-app .sz-runtime details > summary { font-size:11px; color:#64776a; cursor:pointer; }
+#shizhi-app .sz-scan-secondary { display:flex; flex-wrap:wrap; align-items:center; gap:8px; margin:-4px 0 12px; font-size:10px; color:#68756b; }
+#shizhi-app .sz-scan-secondary button { font-size:11px; }
+#shizhi-app .sz-preference-notice { padding:12px; margin:12px 0; background:#f7f1df; border:1px solid #e9dfbf; border-radius:12px; font-size:12px; line-height:1.8; }
+#shizhi-app .sz-preference-notice p { margin-bottom:8px; overflow-wrap:anywhere; }
+#shizhi-app .sz-runtime h3 { min-width:0; overflow-wrap:anywhere; }

@@ -1,0 +1,242 @@
+<div id="shizhi-design" class="viz-dotted-background">
+  <style>
+    #shizhi-design { padding: 18px 10px; }
+    #shizhi-design .sz-preview-label { max-width: 430px; margin: 0 auto 12px; padding-right: 90px; color: light-dark(#69736d,#a8b4ad); font: 12px/1.5 system-ui,sans-serif; }
+    #shizhi-design .sz-product { --sz-bg: light-dark(#f6f7f2,#17221e); --sz-paper: light-dark(#ffffff,#21322a); --sz-ink: light-dark(#24392e,#edf2e7); --sz-sub: light-dark(#6c7b70,#b0bfb1); --sz-line: light-dark(#e3e8dd,#3a4b40); --sz-green: light-dark(#315f49,#c1d8a9); --sz-on-green: light-dark(#ffffff,#1d3224); --sz-soft: light-dark(#eaf0e2,#304632); --sz-warm: light-dark(#f1ecdf,#3e3a2c); --sz-error: light-dark(#9c503c,#f0aa8e); max-width: 430px; margin: auto; overflow: hidden; border: 1px solid var(--sz-line); border-radius: 26px; background: var(--sz-bg); color: var(--sz-ink); font: 14px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI","Microsoft YaHei UI","Microsoft YaHei",sans-serif; font-family: "Segoe UI","Microsoft YaHei UI","Microsoft YaHei",sans-serif!important; box-shadow: 0 14px 48px light-dark(#263b3020,#00000030); }
+    #shizhi-design .sz-product * { box-sizing: border-box; font-family: inherit !important; }
+    #shizhi-design [hidden] { display: none !important; }
+    #shizhi-design .sz-product button, #shizhi-design .sz-product input, #shizhi-design .sz-product textarea, #shizhi-design .sz-product select { font: inherit; color: inherit; }
+    #shizhi-design .sz-product button { border: 0; background: transparent; min-height: 44px; padding: 8px 12px; border-radius: 12px; }
+    #shizhi-design .sz-product button:disabled { opacity: .4; }
+    #shizhi-design .sz-product button:focus-visible, #shizhi-design .sz-product input:focus-visible, #shizhi-design .sz-product textarea:focus-visible { outline: 2px solid var(--sz-green); outline-offset: 3px; }
+    #shizhi-design .sz-product h1, #shizhi-design .sz-product h2, #shizhi-design .sz-product h3, #shizhi-design .sz-product p { margin: 0; }
+    #shizhi-design .sz-product h1 { font-size: 25px; font-weight: 500; line-height: 1.45; letter-spacing: -.7px; }
+    #shizhi-design .sz-product h2 { font-size: 18px; font-weight: 500; line-height: 1.55; }
+    #shizhi-design .sz-product h3 { font-size: 15px; font-weight: 500; }
+    #shizhi-design .sz-row { display: flex; align-items: center; gap: 10px; }
+    #shizhi-design .sz-between { justify-content: space-between; }
+    #shizhi-design .sz-icon { display: inline-flex; align-items: center; justify-content: center; flex-shrink: 0; }
+    #shizhi-design .sz-icon svg { width: 19px; height: 19px; stroke-width: 1.7; }
+    #shizhi-design .sz-header { padding: 23px 22px 12px; }
+    #shizhi-design .sz-logo { width: 36px; height: 36px; background: var(--sz-green); color: var(--sz-on-green); border-radius: 12px; }
+    #shizhi-design .sz-brand { font-size: 19px; font-weight: 500; letter-spacing: 3px; }
+    #shizhi-design .sz-brand-en { margin-top: -4px; font-size: 10px; letter-spacing: 2px; color: var(--sz-sub); }
+    #shizhi-design .sz-platform { background: var(--sz-paper)!important; border: 1px solid var(--sz-line)!important; font-size: 12px!important; gap: 6px; }
+    #shizhi-design .sz-platform-mark { font-size: 11px; font-weight: 500; letter-spacing: -.7px; }
+    #shizhi-design .sz-intro { padding: 9px 22px 19px; }
+    #shizhi-design .sz-intro p { color: var(--sz-sub); margin-top: 5px; font-size: 12px; }
+    #shizhi-design .sz-tabs { display: grid; grid-template-columns: .85fr .85fr .85fr 1.25fr; padding: 0 14px; border-bottom: 1px solid var(--sz-line); gap: 0; }
+    #shizhi-design .sz-tabs button { color: var(--sz-sub); border-radius: 0; position: relative; white-space: nowrap; padding: 10px 0 13px; font-size: 13px; }
+    #shizhi-design .sz-tabs button[aria-selected="true"] { color: var(--sz-green); font-weight: 500; }
+    #shizhi-design .sz-tabs button[aria-selected="true"]::after { content: ""; position: absolute; bottom: 0; left: 24%; right: 24%; height: 3px; background: var(--sz-green); border-radius: 3px 3px 0 0; }
+    #shizhi-design .sz-content { padding: 19px 18px 20px; min-height: 380px; }
+    #shizhi-design .sz-badge { display: inline-flex; gap: 5px; align-items: center; font-size: 11px; padding: 3px 8px; border-radius: 6px; color: var(--sz-green); background: var(--sz-soft); }
+    #shizhi-design .sz-sub { color: var(--sz-sub); font-size: 12px; }
+    #shizhi-design .sz-dot { height: 5px; width: 5px; background: currentColor; border-radius: 100%; display: inline-block; }
+    #shizhi-design .sz-primary { background: var(--sz-green)!important; color: var(--sz-on-green)!important; display: inline-flex; align-items: center; justify-content: center; gap: 8px; font-weight: 500!important; }
+    #shizhi-design .sz-outline { border: 1px solid var(--sz-line)!important; background: var(--sz-paper)!important; }
+    #shizhi-design .sz-link { color: var(--sz-green)!important; font-size: 12px!important; }
+    #shizhi-design .sz-fill { width: 100%; }
+    #shizhi-design .sz-scan { margin-bottom: 17px; gap: 8px; }
+    #shizhi-design .sz-scan .sz-primary { flex: 1; }
+    #shizhi-design .sz-scan-state { flex: 1.15; padding-left: 4px; font-size: 12px; }
+    #shizhi-design .sz-scan-state p + p { margin-top: 3px; }
+    #shizhi-design .sz-player { background: var(--sz-paper); border: 1px solid var(--sz-line); padding: 18px; border-radius: 20px; }
+    #shizhi-design .sz-player-title { margin-top: 13px!important; font-size: 20px!important; line-height: 1.6!important; }
+    #shizhi-design .sz-player-source { display: flex; align-items: center; gap: 6px; color: var(--sz-sub); margin: 9px 0 14px!important; font-size: 11px; flex-wrap: wrap; }
+    #shizhi-design .sz-summary { padding: 12px 13px; background: var(--sz-bg); border-radius: 12px; font-size: 13px; line-height: 1.85; }
+    #shizhi-design .sz-progress { height: 3px; background: var(--sz-soft); border-radius: 8px; margin-top: 23px; overflow: hidden; }
+    #shizhi-design .sz-progress span { display: block; width: 26%; height: 100%; background: var(--sz-green); }
+    #shizhi-design .sz-timeline { color: var(--sz-sub); font-size: 10px; margin-top: 5px; }
+    #shizhi-design .sz-controls { justify-content: center; gap: 24px; margin: 13px 0 9px; }
+    #shizhi-design .sz-controls .sz-play { width: 57px; height: 57px; border-radius: 50%; background: var(--sz-green); color: var(--sz-on-green); }
+    #shizhi-design .sz-controls button { display: inline-flex; align-items: center; justify-content: center; }
+    #shizhi-design .sz-controls .sz-play svg { width: 24px; height: 24px; }
+    #shizhi-design .sz-controls .sz-skip { color: var(--sz-green); }
+    #shizhi-design .sz-player-footer { border-top: 1px solid var(--sz-line); padding-top: 5px; }
+    #shizhi-design .sz-player-footer button { min-height: 35px; padding: 3px 0; font-size: 11px; }
+    #shizhi-design .sz-section-title { margin: 21px 2px 4px; }
+    #shizhi-design .sz-section-title h3 { font-size: 14px; }
+    #shizhi-design .sz-list-row { border-bottom: 1px solid var(--sz-line); display: flex; align-items: center; gap: 10px; padding: 12px 1px; }
+    #shizhi-design .sz-list-row:last-child { border-bottom: 0; }
+    #shizhi-design .sz-art { width: 44px; height: 48px; border-radius: 10px; background: var(--sz-soft); color: var(--sz-green); display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+    #shizhi-design .sz-art.warm { background: var(--sz-warm); }
+    #shizhi-design .sz-list-copy { flex: 1; min-width: 0; }
+    #shizhi-design .sz-list-copy h3 { font-size: 12px; line-height: 1.65; }
+    #shizhi-design .sz-list-copy p { font-size: 10px; margin-top: 3px; color: var(--sz-sub); }
+    #shizhi-design .sz-list-row .sz-row-action { padding: 6px; min-width: 40px; display: flex; align-items: center; justify-content: center; }
+    #shizhi-design .sz-note { margin-top: 14px!important; color: var(--sz-sub); font-size: 11px; line-height: 1.8; }
+    #shizhi-design .sz-group { background: var(--sz-paper); border: 1px solid var(--sz-line); border-radius: 17px; padding: 17px; margin-bottom: 14px; }
+    #shizhi-design .sz-group-head { margin-bottom: 13px; }
+    #shizhi-design .sz-setting-row { padding: 14px 0; border-bottom: 1px solid var(--sz-line); }
+    #shizhi-design .sz-setting-row > .sz-row { flex-wrap: wrap; }
+    #shizhi-design .sz-setting-row:last-child { border: 0; padding-bottom: 0; }
+    #shizhi-design .sz-setting-label { font-size: 13px; font-weight: 500; }
+    #shizhi-design .sz-setting-help { color: var(--sz-sub); font-size: 11px; line-height: 1.8; margin-top: 6px!important; }
+    #shizhi-design .sz-stepper { display: flex; align-items: center; gap: 3px; background: var(--sz-bg); border-radius: 12px; }
+    #shizhi-design .sz-stepper button { width: 36px; padding: 5px; font-size: 20px; color: var(--sz-green); }
+    #shizhi-design .sz-stepper output { min-width: 34px; text-align: center; font-size: 14px; font-variant-numeric: tabular-nums; }
+    #shizhi-design .sz-field { display: block; margin-top: 14px; }
+    #shizhi-design .sz-field > span { display: block; font-size: 12px; margin-bottom: 7px; }
+    #shizhi-design .sz-product input:not([type="checkbox"]), #shizhi-design .sz-product textarea, #shizhi-design .sz-product select { width: 100%; min-height: 44px; border: 1px solid var(--sz-line); border-radius: 11px; background: var(--sz-bg); padding: 10px 11px; font-size: 16px; resize: vertical; }
+    #shizhi-design .sz-product textarea { line-height: 1.7; min-height: 105px; }
+    #shizhi-design .sz-product input::placeholder { color: var(--sz-sub); }
+    #shizhi-design .sz-product input[type="checkbox"] { accent-color: var(--sz-green); width: 20px; height: 20px; flex-shrink: 0; }
+    #shizhi-design .sz-switch-label { flex: 1; }
+    #shizhi-design .sz-bottom { border-top: 1px solid var(--sz-line); background: var(--sz-paper); display: grid; grid-template-columns: 1fr 1fr; padding: 8px 20px 11px; }
+    #shizhi-design .sz-bottom button { display: flex; flex-direction: column; gap: 2px; align-items: center; color: var(--sz-sub); font-size: 10px; }
+    #shizhi-design .sz-bottom button[aria-current="page"] { color: var(--sz-green); }
+    #shizhi-design .sz-bottom button[aria-current="page"] .sz-icon { background: var(--sz-soft); width: 58px; height: 29px; border-radius: 12px; }
+    #shizhi-design .sz-bottom .sz-icon { height: 29px; }
+    #shizhi-design .sz-mini { background: var(--sz-soft); margin: 0 18px 13px; border-radius: 12px; padding: 7px 10px; }
+    #shizhi-design .sz-mini-title { flex: 1; font-size: 11px; min-width: 0; }
+    #shizhi-design .sz-mini button { display: flex; padding: 5px; min-width: 40px; }
+    #shizhi-design .sz-toast { background: var(--sz-green); color: var(--sz-on-green); padding: 10px 16px; font-size: 12px; }
+    #shizhi-design .sz-empty { text-align: center; padding: 35px 10px; }
+    #shizhi-design .sz-empty .sz-icon { color: var(--sz-green); margin-bottom: 10px; }
+    #shizhi-design .sz-detail { border-top: 1px solid var(--sz-line); margin-top: 12px; padding-top: 12px; }
+    #shizhi-design .sz-detail ol { padding-left: 19px; margin: 10px 0; }
+    #shizhi-design .sz-detail li { margin-bottom: 12px; font-size: 12px; }
+    #shizhi-design .sz-quote { background: var(--sz-bg); padding: 9px; margin-top: 6px; border-radius: 8px; color: var(--sz-sub); font-size: 11px; }
+    #shizhi-design .sz-time-link { min-height: 28px!important; padding: 0 5px!important; color: var(--sz-green)!important; }
+    #shizhi-design .sz-day { color: var(--sz-sub); font-size: 11px; padding: 12px 0 3px; }
+    #shizhi-design .sz-key-row { position: relative; }
+    #shizhi-design .sz-key-row input { padding-right: 50px!important; }
+    #shizhi-design .sz-key-row button { position: absolute; right: 2px; top: 1px; min-width: 44px; display: flex; align-items: center; justify-content: center; }
+    #shizhi-design .sz-platform-choice { border: 1px solid var(--sz-line); border-radius: 14px; margin-bottom: 15px; padding: 10px 12px; background: var(--sz-paper); }
+    #shizhi-design .sz-product details summary { padding: 10px 0; font-size: 12px; }
+    @media(max-width:360px) { #shizhi-design { padding: 8px 0; } #shizhi-design .sz-product { border-radius: 19px; } #shizhi-design .sz-header { padding: 18px 16px 10px; } #shizhi-design .sz-intro { padding-left:16px; padding-right:16px; } #shizhi-design .sz-content { padding: 15px 12px; } #shizhi-design .sz-player { padding: 15px; } #shizhi-design .sz-controls { gap: 19px; } }
+  </style>
+  <div class="sz-preview-label">交互原型 · 示例数据 · 不联网</div>
+  <section class="sz-product" aria-label="拾知手机端设计原型">
+    <div id="sz-feedback" class="sz-toast" role="status" hidden></div>
+    <header class="sz-header sz-row sz-between">
+      <div class="sz-row"><span class="sz-logo sz-icon"><i data-lucide="sprout" aria-hidden="true"></i></span><div><div class="sz-brand">拾知</div><div class="sz-brand-en">SHIZHI</div></div></div>
+      <button type="button" class="sz-platform sz-row cursor-interaction" data-action="platform" aria-expanded="false"><span class="sz-platform-mark">bilibili</span><span>B 站</span><span class="sz-icon"><i data-lucide="chevron-down" aria-hidden="true"></i></span></button>
+    </header>
+    <div id="sz-platform-panel" hidden class="sz-platform-choice sz-row sz-between" style="margin-left:18px;margin-right:18px"><span>B 站</span><span class="sz-badge">当前平台 · 其它平台后续接入</span></div>
+    <div id="sz-view"></div>
+    <nav class="sz-bottom" aria-label="主导航">
+      <button type="button" class="cursor-interaction" data-action="root" data-value="video" aria-current="page"><span class="sz-icon"><i data-lucide="audio-lines" aria-hidden="true"></i></span><span>刷视频</span></button>
+      <button type="button" class="cursor-interaction" data-action="root" data-value="global"><span class="sz-icon"><i data-lucide="settings-2" aria-hidden="true"></i></span><span>设置</span></button>
+    </nav>
+  </section>
+  <script>
+  (() => {
+    const root = document.getElementById('shizhi-design');
+    const view = root.querySelector('#sz-view');
+    const saved = window.openai?.widgetState;
+    const restored = saved?.privateContent?.ui || {};
+    const model = saved?.modelContent || {};
+    const state = { section: restored.section === 'global' ? 'global':'video', tab:['listen','history','favorites','feature'].includes(restored.tab)?restored.tab:'listen', cap: Math.max(1,Math.min(10,Number(model.pendingLimit)||3)),  rate:1, auto:true, current:0, queue:[1,2,3], past:[], future:[], history:[0,4,5], favorites:[4], speaking:false, running:false,  sourceIndex:6, detail:false, interests:'AI 与科技、编程实践、能用于日常生活的知识。少一点概念堆砌，多一点具体方法。', blocked:'情绪煽动、带货、重复搬运', apiUrl:'https://api.openai.com/v1', apiModel:'' };
+    const samples = [
+      { title:'真正有效的学习，从主动回忆开始', author:'知识创作者 A', original:'18:42', duration:'02:18', icon:'brain', summary:'与其反复重看，不如先合上资料，用自己的话复述，再对照原文查漏。把「看懂了」变成「说得出来」。', points:['学完一小节后先关掉资料，试着写出核心思路。','把复述中卡住的地方变成下一次要回答的问题。','隔一段时间再次检索，而不是只在同一天反复重读。'] },
+      { title:'给 AI 写需求，先说清楚验收标准', author:'技术创作者 B', original:'12:36', duration:'01:46', icon:'terminal', summary:'先描述输入、期望输出和不能发生的错误，再用一两个具体例子说明。把「帮我优化一下」改成可检查的目标。', points:['先交代输入、输出、约束和成功标准。','给出一个正确例子和一个边界情况。','用结果是否满足标准来判断任务是否完成。'] },
+      { title:'别急着记笔记，先搭起问题框架', author:'知识创作者 C', original:'21:08', duration:'02:34', icon:'notebook-pen', summary:'从「我想解决什么问题」出发整理信息，而不是按视频播放顺序抄录。让每一条笔记都对应一个使用场景。', points:['先写出正在解决的问题。','只记录能改变下一步行动的信息。','回顾时检查笔记有没有被真正用到。'] },
+      { title:'你的注意力，也需要一个收件箱', author:'生活创作者 D', original:'09:25', duration:'01:25', icon:'inbox', summary:'把突然出现的想法先记到一个固定入口，不立即切换任务。集中处理这些输入，减少来回跳转。', points:['用一个固定入口收集临时想法。','收集时不展开处理。','在安排好的时间统一决定下一步。'] },
+      { title:'把复杂项目拆成能验证的小闭环', author:'技术创作者 E', original:'16:10', duration:'02:02', icon:'blocks', summary:'先让一条完整流程跑通，再增加范围。每个小阶段都要有可观察的结果，而不只是更多代码。', points:['从一个输入到一个输出构成最小闭环。','每一步都能独立验证。','通过小闭环后再增加复杂度。'] },
+      { title:'信息输入之前，先想好怎么使用', author:'知识创作者 F', original:'11:48', duration:'01:38', icon:'book-open', summary:'收藏不是掌握。输入前先想一个使用场景，输入后留下一个可以尝试的小动作。', points:['学习前明确一次真实使用机会。','把知识写成可执行的动作。','用过之后再决定是否长期保留。'] },
+      { title:'给重复任务一个清晰的停止条件', author:'技术创作者 G', original:'14:20', duration:'01:52', icon:'circle-stop', summary:'自动化不应等于无限执行。提前设定数量、时间或成本上限，到达任一条件就停止并说明原因。', points:['把成功条件和停止条件分别写清楚。','在执行前而不是执行后检查预算。','为失败提供明确的人工接管入口。'] },
+      { title:'用一个小实验，而不是争论来验证想法', author:'知识创作者 H', original:'17:04', duration:'02:10', icon:'flask-conical', summary:'把抽象分歧变成一个能观察的预测，先设计成本低的小实验，再根据结果调整判断。', points:['把想法写成可观察的预测。','先验证影响最大的不确定性。','根据证据调整，而不只寻找支持。'] },
+      { title:'整理数字文件，先统一入口和命名', author:'生活创作者 I', original:'08:55', duration:'01:19', icon:'folder-open', summary:'减少到处存放和重复查找：先统一文件进入的位置，再用一致的命名帮助未来的自己定位。', points:['先统一收集入口。','给正在进行的项目一个明确目录。','按自己的实际查找方式设计命名。'] }
+    ];
+    const esc = x => String(x).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+    const icon = name => `<span class="sz-icon"><i data-lucide="${name}" aria-hidden="true"></i></span>`;
+    const button = (action,label,content,extra='') => `<button type="button" ${extra.includes('class=')?'':'class="cursor-interaction"'} data-action="${action}" aria-label="${label}" ${extra}>${content}</button>`;
+    const current = () => state.current === null ? null : samples[state.current];
+    function remember() {
+      const snapshot = {modelContent:{pendingLimit:state.cap,informationArchitecture:'主导航：刷视频、设置；刷视频子页：待听、历史、收藏、功能设置'}, privateContent:{ui:{section:state.section,tab:state.tab}}};
+      window.openai?.setWidgetState?.(snapshot)?.catch(()=>{});
+    }
+    function toast(message) { const el=root.querySelector('#sz-feedback');el.textContent=message;el.hidden=false; }
+    function hydrateIcons() { if(globalThis.lucide)lucide.createIcons({attrs:{width:19,height:19}}); }
+    function miniPlayer() {
+      if(!current())return '';
+      return `<div class="sz-mini sz-row"><span class="sz-mini-title">${state.speaking?'正在播报':'已暂停'} · ${esc(current().title)}</span>${button('toggle','播放或暂停',icon(state.speaking?'pause':'play'))}${button('expand','展开播放器',icon('chevron-up'))}</div>`;
+    }
+    function rows(ids,kind) {
+      if(!ids.length)return `<div class="sz-empty">${icon(kind==='favorites'?'bookmark':'headphones')}<h3>${kind==='favorites'?'还没有收藏':'暂时没有内容'}</h3><p class="sz-note">${kind==='favorites'?'在播报卡片上点收藏，就能长期保留。':'点「刷视频」，开始寻找值得听的内容。'}</p></div>`;
+      return ids.map((id,index)=>{
+        const s=samples[id];
+        return `<div class="sz-list-row"><div class="sz-art ${index%2?'warm':''}">${icon(s.icon)}</div><div class="sz-list-copy"><h3>${esc(s.title)}</h3><p>${kind==='queue'?String(index+1).padStart(2,'0')+' · ':''}摘要 ${s.duration} · 原视频 ${s.original}${state.favorites.includes(id)?' · 已收藏':''}</p></div>${button('playItem','播报：'+esc(s.title),icon('play'),'class="sz-row-action cursor-interaction" data-id="'+id+'"')}${kind==='queue'?'':button('favoriteItem',state.favorites.includes(id)?'取消收藏':'收藏',icon(state.favorites.includes(id)?'bookmark-check':'bookmark'),'class="sz-row-action cursor-interaction" data-id="'+id+'"')}</div>`;
+      }).join('');
+    }
+    function detailMarkup() {
+      const s=current();if(!s)return '';
+      return `<div class="sz-detail"><span class="sz-badge">内容详情 · 演示引用，非真实字幕</span><ol>${s.points.map((p,i)=>`<li>${esc(p)}<div class="sz-quote">${button('source','打开原视频时间点',`0${i+1}:${i===0?'24':i===1?'38':'52'}`,'class="sz-time-link cursor-interaction"')}「${esc(p)}」</div></li>`).join('')}</ol>${button('source','打开原视频',icon('external-link')+' 查看原视频','class="sz-outline sz-fill cursor-interaction"')}<p class="sz-note">正式版仅提炼实际读到的字幕，保留作者、来源和引用；不把摘要当作事实核查。</p></div>`;
+    }
+    function listen() {
+      const s=current();const full=state.queue.length>=state.cap;
+      const phase=!state.running?'点击开始，按你的兴趣寻找':full?'待播已满，已暂停提炼':'正在等待新的可用内容';
+      return `<div class="sz-row sz-scan">${button(state.running?'stop':'start',state.running?'停止刷取':'刷视频',icon(state.running?'square':'sparkles')+(state.running?'停止刷取':'刷视频'),'class="sz-primary cursor-interaction"')}<div class="sz-scan-state"><p>${phase}</p><p class="sz-sub">按需补货 · 仅提炼字幕</p></div></div>
+      <section class="sz-player" aria-label="当前播报">
+        ${s?`<div class="sz-row sz-between"><span class="sz-badge"><span class="sz-dot"></span>${state.speaking?'正在播报':'当前待听'}</span>${button('favorite',state.favorites.includes(state.current)?'取消当前收藏':'收藏当前内容',icon(state.favorites.includes(state.current)?'bookmark-check':'bookmark'),'style="padding:0;min-width:36px;min-height:30px"')}</div>
+        <h2 class="sz-player-title">${esc(s.title)}</h2><p class="sz-player-source">${icon('tv-minimal')}<span>${esc(s.author)} · 原视频 ${s.original}</span><span>· 示例内容</span></p>
+        <div class="sz-summary">${esc(s.summary)}</div><div class="sz-progress" role="progressbar" aria-label="演示播报进度" aria-valuenow="26" aria-valuemin="0" aria-valuemax="100"><span></span></div><div class="sz-timeline sz-row sz-between"><span>00:36</span><span>摘要 ${s.duration}</span></div>
+        <div class="sz-controls sz-row">${button('previous','上一个',icon('skip-back'),'class="sz-skip cursor-interaction"')}${button('toggle',state.speaking?'暂停':'播放',icon(state.speaking?'pause':'play'),'class="sz-play cursor-interaction"')}${button('next','下一个',icon('skip-forward'),'class="sz-skip cursor-interaction"')}</div>
+        <div class="sz-row sz-between sz-player-footer">${button('rate','切换语速',state.rate.toFixed(2).replace(/0$/,'')+'× 语速')}${button('detail','展开或收起内容详情',`<span class="sz-row">${state.detail?'收起详情':'内容详情'} ${icon(state.detail?'chevron-up':'chevron-down')}</span>`)}</div>${state.detail?detailMarkup():''}`:`<div class="sz-empty">${icon('headphones')}<h3>让有用的内容，自己找到你</h3><p class="sz-note">先配置接口、登录 B 站并填写兴趣，再开始刷取。</p></div>`}
+      </section>
+      <div class="sz-section-title sz-row sz-between"><h3>接下来听 <span class="sz-sub">${state.queue.length} / ${state.cap}</span></h3><span class="sz-sub">${state.running&&full?'已暂停补货':'不含当前播报'}</span></div>${rows(state.queue,'queue')}
+      <p class="sz-note">${state.queue.length>state.cap?'已有待播会保留，低于新上限后才恢复补货。':'待播满 '+state.cap+' 条就停下来，听掉一条再补一条。'} 历史保留 7 天，收藏不清除。</p>`;
+    }
+    function feature() {
+      return `<div class="sz-group"><div class="sz-group-head sz-row">${icon('sliders-horizontal')}<h3>先设好边界，再开始</h3></div>
+      <div class="sz-setting-row"><div class="sz-row sz-between"><label class="sz-setting-label" for="sz-cap-out">待播上限</label><div class="sz-stepper">${button('capDown','减少待播上限','−',state.cap<=1?'disabled':'')}<output id="sz-cap-out" aria-live="polite">${state.cap} 条</output>${button('capUp','增加待播上限','+',state.cap>=10?'disabled':'')}</div></div><p class="sz-setting-help">不含当前播报。达到上限后，停止筛选与提炼；听掉一条，再补一条。</p></div></div>
+      <div class="sz-group"><div class="sz-group-head sz-row">${icon('compass')}<h3>什么对你有意义</h3></div><label class="sz-field"><span>我的兴趣与学习目标</span><textarea data-field="interests" rows="3">${esc(state.interests)}</textarea></label><label class="sz-field"><span>屏蔽关键词</span><input data-field="blocked" value="${esc(state.blocked)}" placeholder="用逗号分隔"></label><p class="sz-setting-help">先按规则过滤，再由模型按你的兴趣判断，不按热度排序。</p></div>
+      <div class="sz-group"><div class="sz-group-head sz-row">${icon('headphones')}<h3>播报</h3></div><label class="sz-row sz-setting-row"><span class="sz-switch-label"><span class="sz-setting-label">自动播放与连播</span><span class="sz-setting-help" style="display:block">有内容时开始播报，播完自动接下一条</span></span><input type="checkbox" data-field="auto" ${state.auto?'checked':''}></label><label class="sz-field"><span>默认语速</span><select data-field="rate">${[0.8,1,1.25,1.5].map(n=>`<option value="${n}" ${state.rate===n?'selected':''}>${n}×</option>`).join('')}</select></label><div class="sz-row" style="margin-top:12px">${button('ttsTest','测试中文语音',icon('volume-2')+' 测试语音','class="sz-outline sz-row cursor-interaction"')}<span class="sz-sub">默认使用手机 TTS</span></div></div>
+      <div class="sz-group"><div class="sz-row sz-between"><div><h3>B 站账号</h3><p class="sz-setting-help">在官方网页完成登录，凭据仅本机保存</p></div>${button('login','登录 B 站','登录','class="sz-outline cursor-interaction"')}</div></div>
+      <details><summary class="cursor-interaction">高级设置</summary><div class="sz-group"><label class="sz-field"><span>每条字幕输入上限</span><select><option>12000 字符（默认）</option><option>6000 字符</option><option>24000 字符</option></select></label><p class="sz-setting-help">超出时标明字幕节选，不假装总结了整段视频。没有字幕则跳过，不自动开启付费转写。</p></div></details>
+      ${button('saveFeature','保存功能设置','保存功能设置','class="sz-primary sz-fill cursor-interaction"')}<p class="sz-note">接口 URL、Key 和模型名在底部「设置」中配置。</p>`;
+    }
+    function history() { return `<div class="sz-row sz-between"><h3>最近 7 天</h3><span class="sz-sub">收藏内容不会过期</span></div><div class="sz-day">今天 · 示例记录</div>${rows(state.history,'history')}<p class="sz-note">再次播报不重新提炼，不会重复调用模型。未收藏记录到期自动清理。</p>`; }
+    function favorites() { return `<div class="sz-row sz-between"><h3>值得留下的 ${state.favorites.length} 条</h3><span class="sz-badge">长期保存</span></div>${rows(state.favorites,'favorites')}<p class="sz-note">收藏的是提炼结果与来源，不是下载原视频。取消收藏后重新应用 7 天保留规则。</p>`; }
+    function globalSettings() {
+      return `<div class="sz-intro"><h1>连接你自己的 AI</h1><p>手机直连，不需要电脑或自建后端。</p></div><div class="sz-content"><div class="sz-group"><div class="sz-group-head sz-row">${icon('plug-zap')}<h3>OpenAI 兼容接口</h3></div><label class="sz-field"><span>接口 URL</span><input data-field="apiUrl" value="${esc(state.apiUrl)}" inputmode="url" spellcheck="false"></label><p class="sz-setting-help">填写服务商的 Base URL，按其要求包含 /v1。</p><label class="sz-field"><span>API Key</span><div class="sz-key-row"><input id="sz-api-key" type="password" autocomplete="off" placeholder="仅原型，请勿输入真实 Key">${button('showKey','显示或隐藏 Key',icon('eye'))}</div></label><label class="sz-field"><span>模型名</span><input data-field="apiModel" value="${esc(state.apiModel)}" placeholder="填写服务商提供的模型 ID" spellcheck="false"></label><div class="sz-row" style="margin-top:18px">${button('saveApi','保存接口','保存接口','class="sz-primary cursor-interaction" style="flex:1"')}${button('testApi','测试接口连接','测试连接','class="sz-outline cursor-interaction" style="flex:1"')}</div><p class="sz-setting-help">原型不连接服务。正式版的连接测试会发出一次小型模型请求。</p></div><div class="sz-group"><div class="sz-group-head sz-row">${icon('shield-check')}<h3>只保留必要的数据</h3></div><p class="sz-setting-help">Key 和 B 站登录凭据在本机加密保存。提炼时，偏好与所读字幕会发送到你指定的 AI 服务；B 站 Cookie 不发送给模型。</p></div><div class="sz-row sz-between" style="padding:6px 2px"><span class="sz-sub">待播数量、兴趣与播报设置</span>${button('featureLink','前往刷视频功能设置','去功能设置 →','class="sz-link cursor-interaction"')}</div></div>${miniPlayer()}`;
+    }
+    function render() {
+      if(state.section==='global')view.innerHTML=globalSettings();
+      else { const labels={listen:'待听',history:'历史',favorites:'收藏',feature:'功能设置'};view.innerHTML=`<div class="sz-intro"><h1>${state.tab==='feature'?'让筛选，更懂你。':'把信息，变成收获。'}</h1><p>${state.tab==='feature'?'你决定什么值得听，也决定何时停下来。':'不用盯着屏幕，也能遇到有用的知识。'}</p></div><nav class="sz-tabs" aria-label="刷视频子分页" role="tablist">${Object.entries(labels).map(([k,label])=>`<button type="button" id="sz-tab-${k}" role="tab" class="cursor-interaction" aria-selected="${state.tab===k}" aria-controls="sz-panel" data-action="tab" data-value="${k}">${label}</button>`).join('')}</nav><main class="sz-content" id="sz-panel" role="tabpanel" aria-labelledby="sz-tab-${state.tab}">${({listen,history,favorites,feature}[state.tab])()}</main>${state.tab==='listen'?'':miniPlayer()}`; }
+      root.querySelectorAll('.sz-bottom button').forEach(b=>{if(b.dataset.value===state.section)b.setAttribute('aria-current','page');else b.removeAttribute('aria-current');});
+      hydrateIcons();
+    }
+    function toggleFavorite(id) { const i=state.favorites.indexOf(id);if(i<0)state.favorites.unshift(id);else state.favorites.splice(i,1); }
+    function refill() {
+      while(state.running&&state.queue.length<state.cap&&state.sourceIndex<samples.length){state.queue.push(state.sourceIndex++);}
+      if(state.running && state.queue.length<state.cap && state.sourceIndex>=samples.length){state.running=false;toast('模拟：暂时没有找到更多合适内容；保留待播，不会反复处理相同候选。');}
+    }
+    function playItem(id) {if(state.current!==null&&state.current!==id)state.past.push(state.current);state.current=id;state.queue=state.queue.filter(n=>n!==id);state.speaking=true;if(!state.history.includes(id))state.history.unshift(id);refill();}
+    root.addEventListener('click',e=>{
+      const b=e.target.closest('button[data-action]');if(!b||!root.contains(b))return;const a=b.dataset.action;
+      if(a==='root')state.section=b.dataset.value;
+      else if(a==='tab')state.tab=b.dataset.value;
+      else if(a==='platform'){const panel=root.querySelector('#sz-platform-panel');panel.hidden=!panel.hidden;b.setAttribute('aria-expanded',String(!panel.hidden));return;}
+      else if(a==='featureLink'){state.section='video';state.tab='feature';}
+      else if(a==='expand'){state.section='video';state.tab='listen';}
+      else if(a==='capUp')state.cap=Math.min(10,state.cap+1);
+      else if(a==='capDown')state.cap=Math.max(1,state.cap-1);
+      else if(a==='start'){state.running=true;refill();if(state.queue.length>=state.cap)toast('模拟：待播已满，当前不会再发起筛选或提炼请求。');}
+      else if(a==='stop'){state.running=false;toast('模拟：已停止刷取；已有内容保留，当前播报不受影响。');}
+      else if(a==='toggle'){if(state.current===null&&state.queue.length)playItem(state.queue[0]);else state.speaking=!state.speaking;}
+      else if(a==='next'){if(state.future.length){if(state.current!==null)state.past.push(state.current);state.current=state.future.pop();state.speaking=true;}else if(state.queue.length){playItem(state.queue[0]);}else toast('暂无下一条，不会为了下一条无限调用模型。');}
+      else if(a==='previous'){if(state.past.length){state.future.push(state.current);state.current=state.past.pop();state.speaking=true;}else toast('已是本轮第一条，正式版会从本条开头重播。');}
+      else if(a==='playItem')playItem(Number(b.dataset.id));
+      else if(a==='favorite')toggleFavorite(state.current);
+      else if(a==='favoriteItem')toggleFavorite(Number(b.dataset.id));
+      else if(a==='rate')state.rate=state.rate===1?1.25:state.rate===1.25?1.5:1;
+      else if(a==='detail')state.detail=!state.detail;
+      else if(a==='showKey'){const input=root.querySelector('#sz-api-key');input.type=input.type==='password'?'text':'password';return;}
+      else if(a==='saveFeature')toast('原型设置已更新。正式版在手机保存；已有待播不会因上限调小被删除。');
+      else if(a==='saveApi'){const key=root.querySelector('#sz-api-key');if(key)key.value='';toast('原型未存储凭据，也没有发送任何请求。');}
+      else if(a==='testApi')toast('这是界面原型，不连接服务，不会产生 API 费用。');
+      else if(a==='ttsTest')toast('正式版在这里测试手机的中文 TTS；原型不播放真实声音。');
+      else if(a==='login')toast('正式版打开隔离的 B 站官方登录页，原型不读取登录信息。');
+      else if(a==='source')toast('正式版打开原视频或对应字幕时间点；此处只有示例内容。');
+      render();remember();
+    });
+    root.addEventListener('change',e=>{const f=e.target.dataset.field;if(!f)return;if(f==='auto')state.auto=e.target.checked;else if(f==='rate')state.rate=Number(e.target.value);else if(['interests','blocked','apiUrl','apiModel'].includes(f))state[f]=e.target.value;remember();});
+    root.addEventListener('keydown',e=>{const tab=e.target.closest('[role="tab"]');if(!tab||!['ArrowLeft','ArrowRight','Home','End'].includes(e.key))return;const keys=['listen','history','favorites','feature'];let index=keys.indexOf(state.tab);index=e.key==='Home'?0:e.key==='End'?3:(index+(e.key==='ArrowRight'?1:3))%4;state.tab=keys[index];e.preventDefault();render();root.querySelector('#sz-tab-'+state.tab).focus();remember();});
+    window.addEventListener('openai:set_globals',e=>{const incoming=e.detail?.globals?.widgetState;if(!incoming)return;const m=incoming.modelContent||{};const ui=incoming.privateContent?.ui||{};if(Number.isFinite(m.pendingLimit))state.cap=Math.max(1,Math.min(10,m.pendingLimit));if(['video','global'].includes(ui.section))state.section=ui.section;if(['listen','history','favorites','feature'].includes(ui.tab))state.tab=ui.tab;render();});
+    render();
+  })();
+  </script>
+</div>

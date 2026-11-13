@@ -1,0 +1,11 @@
+{
+  "name": "shizhi-android-validation",
+  "private": true,
+  "version": "0.1.3-alpha1",
+  "description": "Android validation build; Node dependencies are for UI tests only",
+  "scripts": {
+    "test:ui": "node tests/ui.spec.cjs",
+    "test:syntax": "node --check app/src/main/assets/app.js"
+  },
+  "devDependencies": { "playwright": "1.62.1" }
+}
